@@ -1,0 +1,64 @@
+{
+   "background": {
+      "page": "html/background.html",
+      "persistent": false
+   },
+   "browser_action": {
+      "16": "/images/icon_16.png",
+      "24": "/images/icon_24.png",
+      "32": "/images/icon_32.png",
+      "default_title": "__MSG_browser_action_title__"
+   },
+   "commands": {
+      "show-screensaver": {
+         "description": "__MSG_display_now__"
+      },
+      "ss-back": {
+         "description": "__MSG_ss_back__",
+         "suggested_key": {
+            "default": "Alt+Shift+Left"
+         }
+      },
+      "ss-forward": {
+         "description": "__MSG_ss_forward__",
+         "suggested_key": {
+            "default": "Alt+Shift+Right"
+         }
+      },
+      "ss-toggle-paused": {
+         "description": "__MSG_ss_toggle_paused__",
+         "suggested_key": {
+            "default": "Alt+Shift+Space"
+         }
+      },
+      "toggle-enabled": {
+         "description": "__MSG_toggle_enabled__",
+         "suggested_key": {
+            "default": "Alt+Shift+Q"
+         }
+      }
+   },
+   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+   "default_locale": "en_US",
+   "description": "__MSG_chrome_extension_description__",
+   "icons": {
+      "128": "/images/icon_128.png",
+      "16": "/images/icon_16.png",
+      "32": "/images/icon_32.png",
+      "48": "/images/icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApzCjUT1c1Q2dzYdhKWE6NgNRnjSWRJ2KT8ISNzUcLGcdPKyaqvoUHK+ZmXyNk7gwEMIbvGVo9p90gC0nMVNbCXvqF/xbkXggKCoJs5to6xcQ+Yh1tbJOtM4YY8CY6Og2QXRe4Zz9T0WmGxvzhtBBx5L/QIVdxixdVjIJlyPEi9hnEavmt4TnhSV9t6AV4jcEtfuPeA3c42001Cs/7PxFSTKJE5wxhHfICzwlUmEphU/lmTsW0oDDspxxZAyXVuklP+XHHbcjeyiM9jENhwBniRkVB++N3zXJRHjhYjgUxfHu+gcfjTRkOGnW8sj9B+GR9Wiv6dmGiv+4bSYirxzt+wIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "38",
+   "name": "__MSG_chrome_extension_name__",
+   "oauth2": {
+      "client_id": "595750713699-odrvm10qr3eua2nt2q9vre27bvbtvhe1.apps.googleusercontent.com",
+      "scopes": [ "https://picasaweb.google.com/data/" ]
+   },
+   "optional_permissions": [ "background", "https://picasaweb.google.com/" ],
+   "options_page": "/html/options.html",
+   "permissions": [ "identity", "storage", "idle", "power", "system.display", "alarms", "contextMenus" ],
+   "short_name": "__MSG_chrome_extension_name__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.9.7"
+}

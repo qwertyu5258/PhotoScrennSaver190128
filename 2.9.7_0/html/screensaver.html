@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <title>Photo Screen Saver Screensaver Page</title>
+    <link rel=import href=screensaver_imports.html>
+    <style is=custom-style include="iron-flex iron-flex-alignment iron-positioning"></style>
+    <style is=custom-style include=shared-styles></style>
+    <link rel=stylesheet href=../styles/screensaver.css> </head> <body unresolved class="fullbleed vertical layout"><template
+        is=dom-bind id=t>
+        <div id=mainContainer class=flex hidden$=[[noPhotos]]>
+            <neon-animated-pages id=pages class=fit animate-initial-selection><template is=dom-repeat id=repeatTemplate
+                    as=view items=[[_views]]>
+                    <slide-animatable ani-type=[[aniType]] class=fit>
+                        <section id=view[[index]]>
+                            <iron-image class=image src=[[view.url]] width=[[screenWidth]] height=[[screenHeight]]
+                                sizing=[[sizingType]] preload></iron-image>
+                            <div class=time>[[timeLabel]]</div>
+                            <div class=author>[[view.authorLabel]] 111k111 [[view.url]]<sup id=sup></sup></div>
+                            <div class=location>[[view.locationLabel]]</div>
+                        </section>
+                    </slide-animatable>
+                </template></neon-animated-pages>
+        </div>
+        <div class=noPhotos hidden$=[[!noPhotos]]>[[noPhotosLabel]]</div>
+        <iron-image id=pauseImage class=vcr src=../images/pause.png sizing=contain preload hidden$=[[!paused]]></iron-image>
+        <iron-image id=playImage class=vcr src=../images/play.png sizing=contain preload hidden$=[[paused]]></iron-image>
+    </template>
+    <script src=../scripts/screensaver/screensaver.js> </script> </body> </html>
